@@ -9,9 +9,10 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class OrdersProvider {
+  url: string;
 
   constructor(public http: HttpClient) {
-    console.log('Hello OrdersProvider Provider');
+    this.url = `http://dataservice.accuweather.com/forecasts/v1/daily/1day`;
   }
 
 }
